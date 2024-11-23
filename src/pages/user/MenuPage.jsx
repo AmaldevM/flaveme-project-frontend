@@ -1,9 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-     const MenuPage = () => {
-       return (
-         <div>Menu Page Content</div>
-       );
-     };
-
-     export { MenuPage }; 
+export const MenuPage = () => {
+  return (
+    <div>MenuPage</div>
+  )
+}

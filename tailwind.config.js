@@ -1,13 +1,26 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
+  darkMode: ["class"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+     "path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
+    "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}"
+  ],
   theme: {
     extend: {
+    
       fontFamily: {
-        dmserif: ["DM Serif", "serif"],
-        com: ["Comfortaa", "cursive"],
+        montserrat: ['"Montserrat Variable"', 'sans-serif'],
+        lato: ['Lato', 'sans-serif'],
+        marco: ['Marco', 'serif'],
       },
+      colors: {},
     },
   },
-  plugins: [require("daisyui")],
-};
+  plugins: [require("daisyui"), require("tailwindcss-animate")],
+});
