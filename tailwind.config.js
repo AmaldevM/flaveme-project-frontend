@@ -15,7 +15,7 @@ module.exports = withMT({
     extend: {
     
       fontFamily: {
-        montserrat: ['"Montserrat Variable"', 'sans-serif'],
+        montserrat: ['Montserrat Variable', 'sans-serif'],
         lato: ['Lato', 'sans-serif'],
         marco: ['Marco', 'serif'],
       },

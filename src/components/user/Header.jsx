@@ -52,12 +52,6 @@ function Header() {
         {/* Icons */}
         <div className="hidden md:flex items-center space-x-4">
           <Link
-            to="/wishlist"
-            className="text-white hover:text-red-500 transition-transform duration-200 ease-in-out hover:scale-[1.15]"
-          >
-            <FaHeart className="text-xl" />
-          </Link>
-          <Link
             to="/cart"
             className="text-white hover:text-blue-400 transition-transform duration-200 ease-in-out hover:scale-[1.15]"
           >
