@@ -1,13 +1,13 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const ErrorPage = () => {
 
-    const naviagte = useNavigate()
+    const navigate = useNavigate()
 
 
   return <div>
     <h1>404 Not Found!</h1>
-    <h2 onClick={()=>naviagte('/')} >Navigate to home</h2>
+    <h2 onClick={()=>navigate('/')} >Navigate to home</h2>
   </div>;
 };

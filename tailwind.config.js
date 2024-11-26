@@ -13,7 +13,6 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
-    
       fontFamily: {
         montserrat: ['Montserrat Variable', 'sans-serif'],
         lato: ['Lato', 'sans-serif'],
@@ -21,6 +20,9 @@ module.exports = withMT({
       },
       colors: {},
     },
+  },
+  daisyui: {
+    themes: ["light","dark"]
   },
   plugins: [require("daisyui"), require("tailwindcss-animate")],
 });

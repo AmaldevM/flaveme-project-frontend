@@ -11,7 +11,9 @@ export function UserLayout() {
   return (
     <div>
       {isUserAuth ? <UserHeader /> : <Header />}
+      <div className='min-h-96'> 
       <Outlet />
+      </div>
       <Footer />
     </div>
   );
