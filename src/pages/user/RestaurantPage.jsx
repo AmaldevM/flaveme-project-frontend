@@ -1,20 +1,23 @@
-import React, { useState } from 'react'
+import { axiosInstance } from "@/config/axiosInstance"
+import { useEffect } from "react"
+
 
 export const RestaurantPage = () => {
-  const [Restaurants, setRestaurants] = useState([])
 
-  const FetchRestaurants = async  () =>{
-
+  const getAllRest = async () => {
+    try {
+      const response = await axiosInstance({
+        method: "GET",
+        url:"/rest/restaurants"
+      })
+      console.log(response)
+    } catch (error) {
+      
+    }
   }
-
-  useState(()=> {
-    FetchRestaurants()
-  },[])
-
+ useEffect(()=> { getAllRest() },[])
+  
   return (
-
-    
-
-    <div>RestaurantPage</div>
+    <div>Restaurant page</div>
   )
 }

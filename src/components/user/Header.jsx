@@ -31,7 +31,7 @@ function Header() {
               Home
             </button>
           </Link>
-          <Link to="/restaurant">
+          <Link to={"/rest"}>
             <button
               className="text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 dark:after:bg-white 
             after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 transition-transform duration-200 ease-in-out hover:scale-[1.15]"
@@ -39,7 +39,7 @@ function Header() {
               Restaurant
             </button>
           </Link>
-          <Link to="/contact-us">
+          <Link to="/contactus">
             <button
               className="text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 dark:after:bg-white 
             after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 transition-transform duration-200 ease-in-out hover:scale-[1.15]"
@@ -104,7 +104,7 @@ function Header() {
             Home
           </Link>
           <Link
-            to="/restaurant"
+            to="/rest"
             className="block py-2 px-4 text-stone-700 hover:text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 dark:after:bg-white 
             after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 transition-transform duration-200 ease-in-out hover:scale-[1.03]"
           >
