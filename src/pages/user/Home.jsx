@@ -2,7 +2,9 @@ import { HowDoesitWork } from "@/components/user/HowDoesitWork";
 import { Process } from "@/components/user/Process";
 import { Whychooseus } from "@/components/user/Whychooseus";
 import React, { useState } from "react";
-import  logo  from "../../assets/hero/pizza.png"
+import  logo  from "../../assets/hero/5.png"
+import { RestaurantPage } from "./RestaurantPage";
+import RestDetails from "./loginUser/RestDetails";
 
 export const Home = () => {
   const [user, setUser] = useState("");
@@ -80,6 +82,7 @@ export const Home = () => {
           </div>
         </div>
       </main>
+      <RestaurantPage />
       <HowDoesitWork />
       <Process />
       <Whychooseus />

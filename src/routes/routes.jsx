@@ -1,34 +1,43 @@
 import { createBrowserRouter } from "react-router-dom";
 import { RestaurantPage } from "../pages/user/RestaurantPage.jsx";
-import { Wishlist } from "../pages/user/Wishlist";
-import { Cart } from "../pages/user/Cart";
-import { ReviewPage } from "../pages/user/ReviewPage";
+import { Wishlist } from "../pages/user/loginUser/Wishlist.jsx";
+import { Cart } from "../pages/user/loginUser/Cart.jsx";
+import { ReviewPage } from "../pages/user/loginUser/ReviewPage.jsx";
 import { Login } from "../pages/shared/Login";
 import { Signup } from "../pages/shared/Signup";
 import { ErrorPage } from "../pages/shared/ErrorPage";
 import { UserLayout } from "../layout/UserLayout";
-import { MenuPage } from "../pages/user/MenuPage";
 import { Home } from "../pages/user/Home";
 import Contactus from "@/pages/user/Contactus";
+import AuthUser from "./protectedRoutes/AuthUser.jsx";
+import RestDetails from "@/pages/user/loginUser/RestDetails.jsx";
+import ProfilePage from "@/pages/user/loginUser/ProfilePage.jsx";
+import Menus from "@/components/user/Menus.jsx";
 
-export const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <UserLayout />,
-      errorElement: <ErrorPage />,
-      children: [
-        { path: "", element: <Home /> },
-        { path: "signup", element: <Signup /> },
-        { path: "login", element: <Login /> },
-        { path: "rest", element: <RestaurantPage /> },
-        { path: "menu", element: <MenuPage /> },
-        { path: "wishlist", element: <Wishlist /> },
-        { path: "profile", element: <h1>Profile page</h1> },
-        { path: "cart", element: <Cart /> },
-        { path: "review", element: <ReviewPage /> },
-        { path: "contactus", element: <Contactus />},
-      ],
-    },
-  ],
-);
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <UserLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      { path: "", element: <Home /> },
+      { path: "signup", element: <Signup /> },
+      { path: "login", element: <Login /> },
+      { path: "rest", element: <RestaurantPage /> },
+      { path: "menu", element: <Menus /> },
+      { path: "contactus", element: <Contactus /> },
+      // Logged-in user
+      {
+        path: "user",
+        element: <AuthUser />,
+        children: [
+          { path: "restaurants/:restaurantid",  element: <RestDetails />, },
+          { path: "profile/:id", element: <ProfilePage />, },
+          { path: "getCart", element: <Cart />, },
+          { path: "wishlist", element: <Wishlist /> },
+          { path: "review", element: <ReviewPage /> },
+        ],
+      },
+    ],
+  },
+]);
