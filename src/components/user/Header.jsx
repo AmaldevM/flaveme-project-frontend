@@ -10,7 +10,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white/0 font-montserrat  font-bold text-orange-600 backdrop-blur-sm shadow-md  top-1 z-60 py-3 rounded-3xl">
+    <header className="bg-white/10 font-montserrat  font-bold text-orange-600 backdrop-blur-sm shadow-md  top-1 z-60 py-3 rounded-3xl">
       <div className="container mx-auto px-4 flex items-center justify-between h-16  ">
         {/* Logo */}
         <Link to="/">
@@ -37,6 +37,14 @@ function Header() {
             after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 transition-transform duration-200 ease-in-out hover:scale-[1.15]"
             >
               Restaurant
+            </button>
+          </Link>
+          <Link to="/about">
+            <button
+              className="text-white relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 dark:after:bg-white 
+            after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 transition-transform duration-200 ease-in-out hover:scale-[1.15]"
+            >
+              About 
             </button>
           </Link>
           <Link to="/contactus">

@@ -1,6 +1,6 @@
 import React from "react";
-import { cn } from "../../utils.js";
-import { useMediaQuery } from "../../use-media-query.js";
+import { cn } from "../../lib/utils.js";
+import { useMediaQuery } from "../../lib/use-media-query.js";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaUserCircle, FaShoppingCart, FaHeart } from "react-icons/fa";
@@ -11,7 +11,7 @@ export const UserHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white/0 font-montserrat  font-bold text-orange-600 backdrop-blur-sm shadow-md sticky top-1 z-60 py-3 rounded-3xl">
+    <header className="bg-white/0 font-montserrat  font-bold text-orange-600 backdrop-blur-sm shadow-md  top-1 z-60 py-3 rounded-3xl">
       <div className="container mx-auto px-4 flex items-center justify-between h-16  ">
         {/* Logo */}
         <Link to="/">

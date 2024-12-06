@@ -13,6 +13,7 @@ import AuthUser from "./protectedRoutes/AuthUser.jsx";
 import RestDetails from "@/pages/user/loginUser/RestDetails.jsx";
 import ProfilePage from "@/pages/user/loginUser/ProfilePage.jsx";
 import Menus from "@/components/user/Menus.jsx";
+import { About } from "@/pages/user/About.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,7 @@ export const router = createBrowserRouter([
       { path: "rest", element: <RestaurantPage /> },
       { path: "menu", element: <Menus /> },
       { path: "contactus", element: <Contactus /> },
+      { path: "about", element: <About />},
       // Logged-in user
       {
         path: "user",

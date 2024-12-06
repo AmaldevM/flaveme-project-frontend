@@ -6,11 +6,11 @@ import logo from "../../assets/logo 2.png"
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-slate/20 font-montserrat  font-bold text-orange-600 backdrop-blur-md shadow-md  top-1 z-60 py-3 rounded-2xl">
+      <footer className="bg-slate/40 font-montserrat  font-bold text-orange-600 backdrop-blur-md shadow-md  top-1 z-60 py-3 rounded-2xl">
     <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
       <div className="md:flex md:justify-between">
         <Link to="/" className="flex items-center h-250 w-400">
-          <img src={logo} className="h-8 me-3" alt="FlaveMe logo" />
+          <img src={logo} className="h-20 w-20 " alt="FlaveMe logo" />
         </Link>
         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>

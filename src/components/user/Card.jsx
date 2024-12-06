@@ -1,61 +1,51 @@
-import React from 'react'
+import * as React from 'react';
+import AspectRatio from '@mui/joy/AspectRatio';
+import Button from '@mui/joy/Button';
+import Card from '@mui/joy/Card';
+import CardContent from '@mui/joy/CardContent';
+import IconButton from '@mui/joy/IconButton';
+import Typography from '@mui/joy/Typography';
+import BookmarkAdd from '@mui/icons-material/BookmarkAddOutlined';
 
-import Dropdown from "components/dropdown";
-import { AiOutlineUser } from "react-icons/ai";
-import { BsThreeDots } from "react-icons/bs";
-import { FiSettings } from "react-icons/fi";
-import { AiOutlineShop } from "react-icons/ai";
-import { TiLightbulb } from "react-icons/ti";
-
-export const Card = () => {
-    const { transparent } = props;
-    const [open, setOpen] = React.useState(false);
-    return (
-      <Dropdown
-        button={
-          <button
-            onClick={() => setOpen(!open)}
-            open={open}
-            className={`flex items-center text-xl hover:cursor-pointer ${
-              transparent
-                ? "bg-none text-white hover:bg-none active:bg-none"
-                : "bg-lightPrimary p-2 text-brand-500 hover:bg-gray-100 dark:bg-navy-700 dark:text-white dark:hover:bg-white/20 dark:active:bg-white/10"
-            } linear justify-center rounded-lg font-bold transition duration-200`}
-          >
-            <BsThreeDots className="h-6 w-6" />
-          </button>
-        }
-        animation={"origin-top-right transition-all duration-300 ease-in-out"}
-        classNames={`${transparent ? "top-8" : "top-11"} right-0 w-max`}
-        children={
-          <div className="z-50 w-max rounded-xl bg-white py-3 px-4 text-sm shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-            <p className="hover:text-black flex cursor-pointer items-center gap-2 text-gray-600 hover:font-medium">
-              <span>
-                <AiOutlineUser />
-              </span>
-              Panel 1
-            </p>
-            <p className="hover:text-black mt-2 flex cursor-pointer items-center gap-2 pt-1 text-gray-600 hover:font-medium">
-              <span>
-                <AiOutlineShop />
-              </span>
-              Panel 2
-            </p>
-            <p className="hover:text-black mt-2 flex cursor-pointer items-center gap-2 pt-1 text-gray-600 hover:font-medium">
-              <span>
-                <TiLightbulb />
-              </span>
-              Panel 3
-            </p>
-            <p className="hover:text-black mt-2 flex cursor-pointer items-center gap-2 pt-1 text-gray-600 hover:font-medium">
-              <span>
-                <FiSettings />
-              </span>
-              Panel 4
-            </p>
-          </div>
-        }
-      />
-    );
-  }
-  
+export default function BasicCard() {
+  return (
+    <Card sx={{ width: 320 }}>
+      <div>
+        <Typography level="title-lg">Yosemite National Park</Typography>
+        <Typography level="body-sm">April 24 to May 02, 2021</Typography>
+        <IconButton
+          aria-label="bookmark Bahamas Islands"
+          variant="plain"
+          color="neutral"
+          size="sm"
+          sx={{ position: 'absolute', top: '0.875rem', right: '0.5rem' }}
+        >
+          <BookmarkAdd />
+        </IconButton>
+      </div>
+      <AspectRatio minHeight="120px" maxHeight="200px">
+        <img
+          src="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286"
+          srcSet="https://images.unsplash.com/photo-1527549993586-dff825b37782?auto=format&fit=crop&w=286&dpr=2 2x"
+          loading="lazy"
+          alt=""
+        />
+      </AspectRatio>
+      <CardContent orientation="horizontal">
+        <div>
+          <Typography level="body-xs">Total price:</Typography>
+          <Typography sx={{ fontSize: 'lg', fontWeight: 'lg' }}>$2,900</Typography>
+        </div>
+        <Button
+          variant="solid"
+          size="md"
+          color="primary"
+          aria-label="Explore Bahamas Islands"
+          sx={{ ml: 'auto', alignSelf: 'center', fontWeight: 600 }}
+        >
+          Explore
+        </Button>
+      </CardContent>
+    </Card>
+  );
+}
